@@ -1,0 +1,26 @@
+{
+	"name": "macfly/yii2-opengraphio",
+	"description": "Yammer component for Yii framework",
+	"keywords": ["yii2", "opengraphio", "http"],
+	"type": "yii2-extension",
+	"license": "BSD-3-Clause",
+	"support": {
+		"issues": "https://github.com/Marty-Macfly/yii2-opengraphio/issues",
+		"source": "https://github.com/Marty-Macfly/yii2-opengraphio"
+	},
+	"authors": [
+		{
+			"name": "Charles DELFLY",
+			"email": "c.delfly@linkbynet.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"require": {
+		"yiisoft/yii2-httpclient": "~2.0.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"macfly\\opengraphio\\": "src/"
+		}
+	}
+}
