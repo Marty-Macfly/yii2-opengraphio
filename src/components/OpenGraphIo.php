@@ -4,15 +4,16 @@ namespace macfly\opengraphio\components;
 
 use Yii;
 use yii\helpers\ArrayHelper;
+use yii\httpclient\Client;
 
-class OpenGraphIo extends \yii\httpclient\Client
+class OpenGraphIo extends Client
 {
-    public $baseUrl = 'https://opengraph.io/api/1.1/site/';
+    public $baseUrl = 'https://opengraph.io/api/1.1/site';
     public $appId   = null;
 
     public function getHybridGraph($site)
     {
-        $rs = $this->get(sprintf("%s&app_id=%s", urlencode($site), $this->appId))->send();
+        $rs = $this->get(sprintf("%s?app_id=%s", urlencode($site), $this->appId))->send();
 
         if (!$rs->isOk)
         {
