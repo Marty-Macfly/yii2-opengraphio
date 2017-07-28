@@ -18,6 +18,7 @@ class OpenGraphIo extends Client
         if (!$rs->isOk)
         {
             Yii::error(sprintf("Unable to get OpenGraph for %s data : %d -> %s", $site, $rs->statusCode, $rs->content));
+						return false;
         }
 
         return ArrayHelper::getValue($rs->data, 'hybridGraph');
